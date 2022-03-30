@@ -59,15 +59,15 @@ export default class FetchExample extends React.Component {
     }
 
     return(
-      <View style={{flex: 1, paddingTop:20}}>
+      <View style={{backgroundColor:"#1a1c2c",flex: 1, paddingTop:20}}>
         <FlatList
           data={this.state.dataSource}
           renderItem={({item}) => 
 
-          <View style={{border:"1px solid black",textAlign:"center,",marginLeft:150,marginRight:150,paddingLeft:20,marginBottom:10}}>
-          <Text style={{color:"black",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Név: "}{item.nev} </Text>
-          <Text style={{color:"black",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Idő: "}{item.ido}{" másodperc"} </Text>
-          <Text style={{color:"black",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Pályaméret: "}{item.meret} </Text>
+          <View style={{backgroundColor:"#333c57",border:"4px solid #566c86",textAlign:"center,",marginLeft:150,marginRight:150,paddingLeft:20,marginBottom:10}}>
+          <Text style={{color:"white",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Név: "}{item.nev} </Text>
+          <Text style={{color:"white",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Idő: "}{item.ido}{" másodperc"} </Text>
+          <Text style={{color:"white",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Pályaméret: "}{item.meret} </Text>
           
           </View>
         

@@ -10,26 +10,27 @@ export default class FetchExample extends React.Component {
   }
   }
 
-  szavazat=(szam)=>{
+  torol=(szam)=>{
     var bemenet={
       bevitel1:szam
     }
 
-  fetch("http://localhost:8080/Ranglista8", {
+  fetch("http://localhost:8080/adattorles", {
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
     }
   
   )
-  .then(x => x.text());
-  
+  .then(x => x.text())
+  .then(y => alert(y));
+
 
   }
 
 
   componentDidMount(){
-    return fetch('http://localhost:8080/Ranglista8')
+    return fetch('http://localhost:8080/mindenadat')
       .then((response) => response.json())
       .then((responseJson) => {
 
@@ -57,7 +58,6 @@ export default class FetchExample extends React.Component {
         </View>
       )
     }
-
     return(
       <View style={{backgroundColor:"#1a1c2c",flex: 1, paddingTop:20}}>
         <FlatList
@@ -68,12 +68,16 @@ export default class FetchExample extends React.Component {
           <Text style={{color:"white",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Név: "}{item.nev} </Text>
           <Text style={{color:"white",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Idő: "}{item.ido}{" másodperc"} </Text>
           <Text style={{color:"white",fontSize:20,textAlign:"left",marginleft:20,marginTop:5,marginBottom:5}}   >{"Pályaméret: "}{item.meret} </Text>
-          
+          <TouchableOpacity
+            style={styles.button}
+            onPress={()=>this.torol(item.id)}
+          >
+            <Text style={{color:"white",backgroundColor:"#4f213f",border:"4px solid #b13e53",marginleft:20,marginTop:5,marginBottom:5,width:60,textAlign:'center'}}>Törlés</Text>
+          </TouchableOpacity>
           </View>
-        
+            
         }
 
-        
         
         />
       </View>
