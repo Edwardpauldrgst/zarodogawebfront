@@ -34,7 +34,7 @@ export default class Download extends Component {
       <div className="container">
         <header className="jumbotron">
           <h2 style={{color:"#333c57"}}>A játékot itt tudod letölteni:</h2>
-          <a href="https://drive.google.com/file/d/15ZXYo1sIPvB3TmE5wZVEO7SPlYDeeKny/view?usp=sharing" target="_blank" style={{textDecoration:"none",color:"#ef7d57"}}><h3 style={{fontWeight:"bold",fontStyle:"italic"}}>Letöltés</h3></a>
+          <a href="https://drive.google.com/file/d/1q-Sl7qrkXS9bALa_Q2g4pZI_zk1SCCzA/view?usp=sharing" target="_blank" style={{textDecoration:"none",color:"#ef7d57"}}><h3 style={{fontWeight:"bold",fontStyle:"italic"}}>Letöltés</h3></a>
           <p style={{textDecoration:"none",color:"#333c57"}}>A linkre kattintva megnyílik egy új oldal, ahol a jobb felső sarokban lévő letöltés gombbal elkezdheted a játék letöltését a böngélsződ használatával.</p>
           <p style={{textDecoration:"none",color:"#333c57"}}>A letöltés végén ki kell csomagold a játék mappáját, amiben majd megtalálod a Sudoku játékot.</p>
         </header>
