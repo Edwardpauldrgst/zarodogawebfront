@@ -7,13 +7,14 @@ import AuthService from "./services/auth.service";
 
 import Login from "./components/login.component";
 import Home from "./components/home.component";
-import Profile from "./components/profile.component";
+import Download from "./components/letolto.component";
 import BoardAdmin from "./components/board-admin.component";
 import Ranglista4 from "./sajatosztalyok/Ranglista4"; 
 import Ranglista5 from "./sajatosztalyok/Ranglista5"; 
 import Ranglista6 from "./sajatosztalyok/Ranglista6"; 
 import Ranglista7 from "./sajatosztalyok/Ranglista7"; 
 import Ranglista8 from "./sajatosztalyok/Ranglista8"; 
+import Nevjegy from "./components/nevjegy.component"; 
 import Ranglista9 from "./sajatosztalyok/Ranglista9"; 
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Admin_torles from "./sajatosztalyok/Admin_torles";
@@ -73,7 +74,7 @@ class App extends Component {
 
         {currentUser ? (
         <Nav>
-          <Nav.Link style={{color:"white"}} href="/profile">
+          <Nav.Link style={{color:"white"}} href="/Fooldal">
              {currentUser.username}
             </Nav.Link>
           <Nav.Link style={{color:"white"}} eventKey={2} href="/login" onClick={this.logOut}>Logout</Nav.Link>
@@ -91,7 +92,6 @@ class App extends Component {
           <Switch>
             <Route exact path={["/", "/Fooldal"]} component={Home} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/profile" component={Profile} />
             <Route path="/admin" component={BoardAdmin} />
             <Route path="/Ranglista4" component={Ranglista4} />
             <Route path="/Ranglista5" component={Ranglista5} />
@@ -101,6 +101,8 @@ class App extends Component {
             <Route path="/Ranglista9" component={Ranglista9} />
             <Route path="/Admin_torles" component={Admin_torles} />
             <Route path="/Admin_torles_ido" component={Admin_torles_ido} />
+            <Route path="/Letolto" component={Download} />
+            <Route path="/Nevjegy" component={Nevjegy} />
           </Switch>
         </div>
       </div>

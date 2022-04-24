@@ -15,7 +15,7 @@ export default class FetchExample extends React.Component {
       bevitel1:szam
     }
 
-  fetch("http://localhost:8080/Ranglista6", {
+  fetch("http://localhost:3000/Ranglista6", {
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -29,7 +29,7 @@ export default class FetchExample extends React.Component {
 
 
   componentDidMount(){
-    return fetch('http://localhost:8080/Ranglista6')
+    return fetch('http://localhost:3000/Ranglista6')
       .then((response) => response.json())
       .then((responseJson) => {
 
